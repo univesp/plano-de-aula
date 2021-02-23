@@ -323,4 +323,7 @@ nav .nav-link {
   input::placeholder, textarea::placeholder {
      color: transparent;
    }
+   #pgBreak{
+     page-break-after: always;
+   }
 }
