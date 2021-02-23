@@ -1,2 +1,5 @@
 # plano-de-aula
-REA - Plano de Aula
+REA - PLANO DE AULA
+
+
+[Link do Recurso Educacional Aberto (REA)](https://apps.univesp.br/plano-de-aula)
