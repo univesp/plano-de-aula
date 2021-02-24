@@ -3,9 +3,7 @@
   src: url('../assets/fonts/slabthing-font/Slabthing-YvLL.ttf');
 }
 
-
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -25,8 +23,41 @@ textarea {
   -moz-box-shadow: none;
   box-shadow: none;
   resize: none;
-  border: 1px solid #adb5bd;
-  padding: 2px;
+  /*  */
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+textarea:focus, input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+textarea::placeholder, input::placeholder {
+  font-style: italic;
 }
 
 input {
@@ -37,7 +68,20 @@ input {
   -moz-box-shadow: none;
   box-shadow: none;
   border: 1px solid #adb5bd;
-  padding: 5px;
+  padding: 10px;
+  /*  */
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 button {
@@ -79,15 +123,18 @@ nav .nav-link {
 
 #telaInicial p {
   text-align: center;
+  line-height: 1.2;
 }
 
 #telaInicial button {
   color: red;
-  background-color: red;
+  /* background-color: red;
   width: 75px;
   height: 75px;
   margin-top: -35px;
   clip-path: polygon(10% 57%, 52% 90%, 90% 56%, 90% 68%, 52% 100%, 10% 70%);
+  z-index: 999;
+  cursor: pointer; */
 }
 
 #telaInicial>div {
@@ -105,7 +152,7 @@ nav .nav-link {
   width: 50%;
 }
 
-#tela1{
+#tela1 {
   display: none;
   transition: 2s;
   opacity: 0;
@@ -166,8 +213,10 @@ nav .nav-link {
 }
 
 .txtAreaCaixa span {
+  min-width: 180px;
   width: 180px;
   margin-right: 10px;
+  display: block;
 }
 
 .inputsVertical>div {
@@ -218,6 +267,10 @@ nav .nav-link {
 }
 
 @media (max-width:992px) {
+  .inputsVertical>div:nth-of-type(1) input {
+    margin-right: 0px;
+  }
+
   #telaInicial {
     flex-direction: column;
     align-items: center;
@@ -246,11 +299,11 @@ nav .nav-link {
     align-items: flex-start;
   }
 
-  .txtAreaCaixa textarea{
+  .txtAreaCaixa textarea {
     width: 100%;
   }
 
-  .txtAreaCaixa span{
+  .txtAreaCaixa span {
     margin-bottom: 15px;
   }
 }
@@ -301,29 +354,31 @@ nav .nav-link {
 }
 
 @media print {
-  #telaInicial{
+  #telaInicial {
     display: none;
   }
 
-  input:placeholder, textarea:placeholder{
-    opacity: 0;
-  }
-  nav, footer, .caixaBotao{
+  nav, footer, .caixaBotao {
     display: none;
   }
-  #formularioCinza > p{
+
+  #formularioCinza>p {
     display: none;
   }
-  #formularioCinza > .txtAreaCaixa{
-    margin-top:25px;
+
+  #formularioCinza>.txtAreaCaixa {
+    margin-top: 25px;
   }
-  #tela1 > p{
+
+  #tela1>p {
     display: none;
   }
+
   input::placeholder, textarea::placeholder {
-     color: transparent;
-   }
-   #pgBreak{
-     page-break-after: always;
-   }
+    color: transparent;
+  }
+
+  #pgBreak {
+    page-break-after: always;
+  }
 }
